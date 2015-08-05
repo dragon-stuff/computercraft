@@ -5,9 +5,10 @@ monitor.clear() --paint the background
 --percentage math constants
 makePercent = 100
 fill = 1
-stop_fill = 45e6
-start_fill = 40e6
-totalCapacity = 50e6
+totalCapacity = 80e6
+stop_fill = totalCapacity*0.8
+start_fill = totalCapacity*0.2
+
 while true do
   energyLevel1 = capacitor_1.getEnergyStored()
   energyAdjusted = (energyLevel1) * (capacitorCount)
