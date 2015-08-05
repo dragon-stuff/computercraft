@@ -25,6 +25,7 @@ while true do
     redstone.setOutput("bottom", true)
   else
     redstone.setOutput("bottom", false)
+  end
   
   monitor.setCursorPos(1,1)
   print("Current energy storage is "..energyAdjusted.." RF")
