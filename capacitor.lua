@@ -5,13 +5,12 @@ monitor.clear() --paint the background
 --percentage math constants
 makePercent = 100
 fill = 1
-stop_fill = 40e6
+stop_fill = 49e6
 start_fill = 10e6
 totalCapacity = 50e6
 while true do
   energyLevel1 = capacitor_1.getEnergyStored()
   energyAdjusted = (energyLevel1) * (capacitorCount)
-  print(energyAdjusted)
   monitor.setCursorPos(6, 5)
   if energyAdjusted > stop_fill then
     fill = 0
