@@ -1,9 +1,9 @@
 -- from http://www.computercraft.info/forums2/index.php?/topic/22157-ender-io-capacitor-bank-monitoring/
 local capacitor_1 = peripheral.wrap("right")
 local modem = peripheral.wrap("back")
-local monitor = peripheral.wrap("monitor_1")
-monitor.setTextColor(1) --text will be white
-monitor.setBackgroundColor(128) --background will be gray
+local monitor = peripheral.wrap("top")
+--monitor.setTextColor(1) --text will be white
+--monitor.setBackgroundColor(128) --background will be gray
 monitor.clear() --paint the background
 i = 1
 --percentage math constants
@@ -24,23 +24,23 @@ while true do
   if energyAdjusted > fillLevel then
         redstone.setOutput("bottom", true)
         monitor.setCursorPos(6, 5)
-        monitor.setTextColor(16384) --text will be red
+        --monitor.setTextColor(16384) --text will be red
         monitor.write("Generators Inactive")
   end
   if redstone.getOutput("bottom") == true then
         monitor.setCursorPos(6, 5)
-        monitor.setTextColor(16384) --text will be red
+        --monitor.setTextColor(16384) --text will be red
         monitor.write("Generators Inactive")
   end
   if redstone.getOutput("bottom") == false then
         monitor.setCursorPos(7,5)
-        monitor.setTextColor(8192) --text will be green
+        --monitor.setTextColor(8192) --text will be green
         monitor.write("Generators Active")
   end
   if energyAdjusted < lowFillLevel then
         redstone.setOutput("bottom", false)
         monitor.setCursorPos(7,5)
-        monitor.setTextColor(8192) --text will be green
+        --monitor.setTextColor(8192) --text will be green
         monitor.write("Generators Active")
   end
   monitor.setCursorPos(1,1)
@@ -52,7 +52,7 @@ while true do
   fillPercentage = (fillAmount) * (100)
   fillInt = math.floor(fillPercentage)
   monitor.setCursorPos(3,2)
-  monitor.setTextColor(1)
+  --monitor.setTextColor(1)
   monitor.write("Currently at "..fillInt.."% capacity")
   --monitor.write(string.format("%.2fillPercentage", fillPercentage))
   sleep(2.5)
