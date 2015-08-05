@@ -1,5 +1,5 @@
 -- from http://www.computercraft.info/forums2/index.php?/topic/22157-ender-io-capacitor-bank-monitoring/
-local capacitor_1 = peripheral.wrap("left")
+local capacitor_1 = peripheral.wrap("right")
 local modem = peripheral.wrap("back")
 local monitor = peripheral.wrap("monitor_1")
 monitor.setTextColor(1) --text will be white
