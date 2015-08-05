@@ -12,7 +12,6 @@ start_fill = totalCapacity*0.2
 while true do
   energyLevel1 = capacitor_1.getEnergyStored()
   energyAdjusted = (energyLevel1) * (capacitorCount)
-  monitor.setCursorPos(6, 5)
   if energyAdjusted > stop_fill then
     fill = 0
     print "Overfill"
@@ -21,21 +20,22 @@ while true do
     print "Underfill"
   end
   
+  monitor.setCursorPos(1,3)
   if fill == 1 then
     redstone.setOutput("bottom", true)
-    monitor.write("Generator: on")
+    monitor.write("On")
   else
     redstone.setOutput("bottom", false)
-    monitor.write("Generator: off")
+    monitor.write("Off")
   end
   
   monitor.setCursorPos(1,1)
-  print("Current energy storage is "..energyAdjusted.." RF")
+  print((energyAdjusted/1e6).."M RF")
   fillAmount = (energyAdjusted) / (totalCapacity)
   fillPercentage = (fillAmount) * (100)
   fillInt = math.floor(fillPercentage)
-  monitor.setCursorPos(3,2)
-  monitor.write("Currently at "..fillInt.."% capacity")
+  monitor.setCursorPos(1,2)
+  monitor.write("fillInt.."% full")
   sleep(2.5)
   monitor.clear()
 end
