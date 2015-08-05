@@ -42,7 +42,7 @@ while true do
   end
   
   monitor.setCursorPos(1,4)
-  monitor.write("Del "..math.floor(diff/sleep_time))
+  monitor.write(math.floor(diff/sleep_time/1000)..'k RF/s')
   
   sleep(sleep_time)
   monitor.clear()
