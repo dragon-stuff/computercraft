@@ -2,17 +2,15 @@
 local capacitor_1 = peripheral.wrap("right")
 local modem = peripheral.wrap("back")
 local monitor = peripheral.wrap("top")
---monitor.setTextColor(1) --text will be white
---monitor.setBackgroundColor(128) --background will be gray
 monitor.clear() --paint the background
 i = 1
 --percentage math constants
 makePercent = 100
---capacitorCount = 5
---capacitorBasic = 1000000
---capacitorStandard = 5000000
---capacitorVibrant = 25000000
-totalCapacity = 80e6
+capacitorCount = 16
+capacitorBasic = 1000000
+capacitorStandard = 5000000
+capacitorVibrant = 25000000
+totalCapacity = capacitorCount * capacitorStandard
 fillPercentage = 0
 difference = 0
 while true do
