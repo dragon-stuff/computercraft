@@ -6,7 +6,7 @@ monitor.clear() --paint the background
 makePercent = 100
 fill = 1
 totalCapacity = 80e6
-stop_fill = totalCapacity*0.8
+stop_fill = totalCapacity*0.9
 start_fill = totalCapacity*0.2
 
 while true do
