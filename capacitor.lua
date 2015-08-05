@@ -8,11 +8,11 @@ monitor.clear() --paint the background
 i = 1
 --percentage math constants
 makePercent = 100
-capacitorCount = 5
-capacitorBasic = 1000000
-capacitorStandard = 5000000
-capacitorVibrant = 25000000
-totalCapacity = (capacitorCount) * (capacitorStandard)
+--capacitorCount = 5
+--capacitorBasic = 1000000
+--capacitorStandard = 5000000
+--capacitorVibrant = 25000000
+totalCapacity = 80e6
 fillPercentage = 0
 difference = 0
 while true do
