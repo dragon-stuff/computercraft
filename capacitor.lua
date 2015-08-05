@@ -35,7 +35,7 @@ while true do
   fillPercentage = (fillAmount) * (100)
   fillInt = math.floor(fillPercentage)
   monitor.setCursorPos(1,2)
-  monitor.write(fillInt.."% full")
-  sleep(2.5)
+  monitor.write(fillInt.."%")
+  sleep(5)
   monitor.clear()
 end
