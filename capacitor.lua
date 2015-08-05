@@ -27,7 +27,7 @@ while true do
   fillPercentage = (fillAmount) * (100)
   fillInt = math.floor(fillPercentage)
   monitor.setCursorPos(1,1)
-  monitor.write(math.floor(energyAdjusted/1e6).."M RF")
+  monitor.write(math.floor(energyAdjusted/1e6).."M")
   
   monitor.setCursorPos(1,2)
   monitor.write(fillInt.."%")
@@ -42,7 +42,7 @@ while true do
   end
   
   monitor.setCursorPos(1,4)
-  monitor.write(math.floor(diff/sleep_time/1000)..'k RF/s')
+  monitor.write(math.floor(diff/sleep_time/1000)..'k/s')
   
   sleep(sleep_time)
   monitor.clear()
