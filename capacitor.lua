@@ -5,8 +5,8 @@ monitor.clear() --paint the background
 --percentage math constants
 makePercent = 100
 fill = 1
-stop_fill = 49e6
-start_fill = 10e6
+stop_fill = 45e6
+start_fill = 40e6
 totalCapacity = 50e6
 while true do
   energyLevel1 = capacitor_1.getEnergyStored()
@@ -14,16 +14,18 @@ while true do
   monitor.setCursorPos(6, 5)
   if energyAdjusted > stop_fill then
     fill = 0
-    monitor.write("Generator: off")
+    print "Overfill"
   elseif energyAdjusted < start_fill then
     fill = 1
-    monitor.write("Generator: on")
+    print "Underfill"
   end
   
   if fill == 1 then
     redstone.setOutput("bottom", true)
+    monitor.write("Generator: on")
   else
     redstone.setOutput("bottom", false)
+    monitor.write("Generator: off")
   end
   
   monitor.setCursorPos(1,1)
