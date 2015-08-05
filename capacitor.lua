@@ -30,7 +30,7 @@ while true do
   end
   
   monitor.setCursorPos(1,1)
-  monitor.write(string.format("%.2f", energyAdjusted/1e6).."M RF")
+  monitor.write(math.floor(energyAdjusted/1e6).."M RF")
   fillAmount = (energyAdjusted) / (totalCapacity)
   fillPercentage = (fillAmount) * (100)
   fillInt = math.floor(fillPercentage)
