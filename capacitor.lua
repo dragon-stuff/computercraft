@@ -42,8 +42,8 @@ while true do
   end
   
   monitor.setCursorPos(1,4)
-  monitor.write("Del "..math.floor(diff/sleeptime))
+  monitor.write("Del "..math.floor(diff/sleep_time))
   
-  sleep(sleeptime)
+  sleep(sleep_time)
   monitor.clear()
 end
